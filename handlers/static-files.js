@@ -7,12 +7,19 @@ function getContentType(url) {
 		return "text/css";
 	} else if (url.endsWith("html")) {
 		return "text/html";
-	} else if (url.endsWith("img")) {
-		return "image/img";
+	} else if (url.endsWith("png")) {
+		return "image/png";
 	} else if (url.endsWith("js")) {
-		return "text/js";
+		return "text/javascript";
+	} else if (url.endsWith("ico")) {
+		return "image/vnd.microsoft.icon";
+	} else if (url.endsWith("jpg")) {
+		return "image/jpeg";
+	} else if (url.endsWith("jpeg")) {
+		return "image/jpeg";
 	}
 }
+
 module.exports = (req, res) => {
 	const pathname = url.parse(req.url).pathname;
 
